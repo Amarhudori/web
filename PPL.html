@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .body{
+            background-color: #F1F9FD;
+        }
+        .menu{
+            height: 60px;
+            width: 100%;
+            background-color:#3C4048;
+            color: white;
+            text-decoration: none;
+            position: fixed;
+        }
+        .menu h3 {
+            float: left;
+            padding-top: 20px;
+            padding-left: 60px;
+            font-family: monospace;
+        }
+        .menu ul {
+            text-align: center;
+            list-style-type: none;
+        }
+        .menu li {
+            float: right;
+            padding-top: 20px;
+            padding-right: 60px;
+            font-family: monospace;
+        }
+        .menu li a {
+            color: white;
+            text-decoration: none;
+        }
+        .slider {
+            height: 500px;
+            background-image: url(img/backgroudweb.jpg);
+            background-size: cover;
+        }
+        .slider h2 {
+            font-family: monospace;
+            padding-left: 60px;
+            padding-top: 130px;
+            font-size: 50px;
+            color: white;
+        }
+        .slider p {
+            font-family: monospace;
+            font-size: 20px;
+            padding-left: 60px;
+            color: white;
+        }
+        .slider .code {
+            height: 40px;
+            width: 115px;
+            border-radius: 10px;
+            background-color: #3C4048;
+            margin-left: 60px;
+            margin-top: 40px;
+            font-family: monospace;
+            float: left;
+        }
+        .slider .code p {
+            padding-left: 20px;
+            padding-top: 10px;
+            color: white;
+            font-size: 12px;
+        }
+        .slider .pidio {
+            border: 1px solid white;
+            height: 40px;
+            width: 115px;
+            border-radius: 10px;
+            margin-left: 190px;
+            margin-top: 40px;
+            
+        }
+        .slider .pidio p {
+            padding-left: 15px;
+            padding-top: 10px;
+            color: white;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .belajar h3 {
+            padding-top: 30px;
+            padding-left: 60px;
+            font-family: monospace;
+        }
+        .belajar .detil {
+            font-family: monospace;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+        .belajar div {
+            height: 200px;
+            width: 30%;
+            background-color: white;
+            margin-left: 35px;
+            margin-top: 35px;
+            border-radius: 10px;
+            /*box-shadow: horizontal,vertikal,ukuran ;*/
+            box-shadow: 5px 5px 10px #3C4048;
+            float: left;
+            margin-right: 10px;
+        }
+        .belajar div h4 {
+            padding-top: 10px;
+            padding-left: 30px;
+            font-family: sans-serif;
+            
+        }
+        
+        .belajar div p {
+            padding-top: 5px;
+            padding-left: 30px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+        .belajar div img {
+            padding-top: 25px;
+            padding-left: 30px;
+        }
+        .kotak{
+            height: 150px;
+            width: 150px;
+            background-color: #3C4048;
+            margin-top: 8%;
+            margin-left: 60px;
+            float: left;
+        }
+        .kotak img {
+            padding: 20px;
+        }
+        .solusi {
+            float: right;
+            margin-top: 3.7%;
+            margin-right: 60px;
+        }
+        .solusi .kel {
+            height: 110px;
+            width: 510px;
+            margin-top: 7%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px #3C4048;
+        }
+        .solusi .kel img {
+            float: left;
+            padding-top: 30px;
+            padding-left: 15px;
+        }
+        .solusi .kel .kelompok p {
+            font-family: monospace;
+            font-size: 13px;
+            padding-left: 80px;
+            padding-top: 5px;
+        }
+        .solusi .kel .kelompok h4 {
+            padding-top: 30px;
+            padding-left: 80px;
+            font-family: monospace;
+        }
+        .tutor {
+            margin-top: 63%;
+        }
+        .tutor h3 {
+            font-family: monospace;
+            padding-left: 60px;
+            padding-top: 5px;
+        }
+        .tutor p {
+            font-family: monospace;
+            padding-left: 60px;
+            padding-top: 5px;
+        }
+        .tutor .detil-tutor .kotak-tutor {
+            margin-left: 60px;
+            height: 220px;
+            width: 240px;
+            background-color: white;
+            box-shadow: 3px 3px 10px #3C4048;
+            float: left;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .tutor .detil-tutor .kotak-tutor div {
+            height: 150px;
+            width: 240px;
+            background-color: #3C4048;
+            border-radius: 10px;
+        }
+        .tutor .detil-tutor .kotak-tutor h4 {
+            font-family: monospace;
+            padding-top: 20px;
+            padding-left: 2px;
+            font-size: 18px;
+        }
+        .tutor small {
+            font-family: monospace;
+            color: #3C4048;
+        }
+        .testimoni {
+            height: 300px;
+            width: 100%;
+            margin-top: 27%;
+            background-color: white;
+        }
+        .testimoni p {
+            color: white;
+            font-family: monospace;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 100px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .yutup {
+            background-color: #3C4048;
+            margin-top: 900px;
+        }
+        .yutup h3 {
+            padding-left: 60px;
+            font-family: monospace;
+            font-size: 23px;
+        }
+        .yutup p {
+            padding-left: 160px;
+            font-family:sans-serif;
+            padding-top: 5px;
+        }
+        .pidio-yutup {
+            background-color: #3C4048;
+            height: 250px;
+            width: 240px;
+            margin-top: 35px;
+            padding-top: 10px;
+            padding-left: 60px;
+        }
+        .pidio-yutup div {
+            background-color: white;
+            height: 400px;
+            width: 535px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px #3C4048;
+            padding-left: 20px;
+            padding-top: 20px;
+            float: left;
+            margin-right: 18px;
+        }
+        .produk {
+            margin-top: 5%;
+        }
+        .produk h3 {
+            padding-left: 60px;
+            font-family: sans-serif;
+            font-size: 23px;
+        }
+        .produk p {
+            padding-left: 60px;
+            font-family: monospace;
+            font-size: 5px;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+    
+    <nav class="menu">
+        <h3>kelasPPL.com</h3>
+        <ul>
+            <li><a href="">Login</a></li>
+            <li><a href="">Tutorial</a></li>
+            <li><a href="">Forum</a></li>
+            <li><a href="">Produk</a></li>
+            <li><a href="">Home</a></li>
+        </ul>
+    </nav>
+    
+    <section class="slider">
+        <h2>Selamat datang di kelas programing</h2>
+        <p class="p">Belajar ngoding gak pake Pusing asalkan sambil makan odading</p>
+        <div class="code">
+            <p>Let's Code</p>
+        </div>
+        
+        <div class="pidio">
+            <p>Lihat Materi</p>
+        </div>
+    </section>
+
+    
+    <div class="belajar">
+        <h3>Mau belajar apa hari ini</h3>
+        <p class="detil">Temukan tutorial berdasarkan bakatmu</p>
+        <div>
+            <img src="img/programming.png" width="55" alt="" srcset="" > 
+            <h4>Web Programing</h4>
+            <p>
+                Pelajari tutorial HTML, CSS dan 
+                Javascript bersama tutor kami
+            </p>
+                   
+        </div>
+        
+        <div>
+            <img src="img/java.png" width="50" alt="" srcset="">
+            <h4>java programing</h4>
+            <p>Pelajari tutorial class,object dan acces modifer bersama tutor kami</p>
+        </div>
+        
+        <div>
+            <img src="img/server.png" width="50" alt="">
+            <h4>Database Fundamental</h4>
+            <p class="detil">pelajari tutorial Query Dasar,Relasi dan nominasi bersama tutor kami</p>
+        </div>
+    </div>
+    
+    <div class="kotak">
+        <img src="img/devteam.jpeg" width="600px" alt="" srcset="">
+    </div>
+    <div class="solusi" style="margin-top: 6%;">
+        
+        
+        
+        <div class="kel" style="background-color: #3C4048; color :white">
+            <img src="img/data-analysis.png" width="50px" height="50px" alt="" srcset="">
+            <div class="kelompok">
+                <h4>Materi Terstuktur</h4>
+                <p>
+                    Panduan belajar yang terstruktur memudahkanmu dalam menyerap materi
+                </p>
+            </div>
+        </div>
+        
+        <div class="kel">
+            <img src="img/bar-chart.png" width="50px" alt="" srcset="">
+            <div class="kelompok">
+                <h4>Tutor Berpengalaman</h4>
+                <p>
+                    Tutor kami bukan kaleng-kaleng, memiliki sertifikat internasional, yuk belajar bareng mereka
+                </p>
+            </div>
+        </div>
+        
+        <div class="kel">
+            <img src="img/monitoring.png" width="50px" alt="" srcset="">
+            <div class="kelompok">
+                <h4>Tempat Belajar Nyaman</h4>
+                <p>
+                    Jangan khawatir lapar kalau saat belajar,
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="yutup">
+        <h3>Tutor terbaru kami</h3>
+        <p>cekidot</p>
+    </div>
+    <div class="pidio-yutup">
+        <div>
+            <iframe width="510" height="300" src="https://www.youtube.com/watch?v=3Ui-NuJ2zpc" title="video tutorial Pengunaan Elemen">
+            </iframe>
+            <h3 style="font-family: sans-serif; padding-top: 10px;">Penggunaan Elemen,</h3>
+            <p style="font-family: sans-serif; padding-top: 5px; color: #3C4048;">
+            simak tutorial berikut, bersama tutor kami Affy XD 
+            seorang Web Developer di Bank Indonesia
+            </p>
+
+            <h4 style="font-size: 15px; font-family: sans-serif; padding-top: 30px; color: #3C4048;"></h4>
+        </div>
+    </div>
+    <aside class="tutor">
+        <h3>Tutor kece kita</h3>
+        <p>Kenalan dulu yuk, biar belajarnya lebih nyaman</p>
+        <div class="detil-tutor" style="margin-top: 35px;">
+
+            <div class="kotak-tutor">
+                <div></div>
+                <h4>Lord jidan</h4>
+                <small>Senior Java Developer</small>
+            </div>
+        
+            <div class="kotak-tutor">
+                <div></div>
+                <h4>Muziee Al Banjary</h4>
+                <small>Web Developer</small>
+            </div>
+        
+            <div class="kotak-tutor">
+                <div></div>
+                <h4>Solday Mumtaz</h4>
+                <small>UI UX Designer</small>
+            </div>
+        
+            <div class="kotak-tutor">
+                <div></div>
+                <h4>Naz Al Hakim</h4>
+                <small>Database Administrator</small>
+
+            </div>
+        </div>
+    </aside>
+
+    <section class="testimoni">
+        <p>
+            "Awalnya saya susah belajar pemograman, setelah saya belajar di kelasPPL.com saya lebih mudah mengerti apa 
+            itu dunia pemograman, soalnya tutor nya asik banget"
+        </p>
+
+        <p style="font-style: italic; color: white; padding-top: 30px; font-size: 14px ;">- Ucup Khoiruddin</p>
+
+    </section>
+
+    <article style="margin: 50%;">
+        <h3>Artikel Terbaru PPL</h3>
+        <h5>Pengunaan Tag HTML</h5>
+        <p align="justify">
+            Tag html adalah 
+        </p>
+    </article>
+    <hr>
+    <div>
+        <h3>Tutorial Lainnya</h3>
+        <ul>
+            <li>HTML DASAR</li>
+            <li>CSS DASAR</li>
+            <li>LINUX DASAR</li>
+            <li>ALGORITMA DASAR</li>
+        </ul>
+    </div>
+    <footer>
+        <p>Copyright 2022 KelasPPL.com</p>
+    </footer>
+</body>
+</html>
